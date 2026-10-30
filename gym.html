@@ -1,0 +1,765 @@
+<html>
+    <head>
+        <title> Gym Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
+        <style>
+            body{
+               
+                padding-left: 13px;
+            }
+            .container{
+                background-color: rgb(23, 21, 21);
+                color: beige;
+                height: 500px;
+                width:100%;
+                background-image: url('gymgirl.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+               
+              
+            }
+            .container img{
+                height: inherit;
+                width: 100%;
+                opacity: 0.3;
+            }
+            .nav{
+                display: flex;
+                justify-content: space-between;
+                height: 28px;
+                background-color: rgb(47, 41, 41);
+                align-items: center;
+                padding: 13px;
+            }
+            .nav p{
+                font-size: 20px;
+                font-weight: 600;
+            }
+            .nav button{
+            background-color: rgb(5, 130, 5);
+            color: white;
+            border-radius: 5px;
+            padding: 9px 16px;
+            margin-right: 48px;
+            
+            }
+            
+            .text{
+                position: relative;
+                top: 182px;
+                text-align: center;
+                font-size: 40px;
+                font-weight: 600;
+                font-family: 'Montserrat', sans-serif;
+            }
+            .button{
+                position: relative;
+                top: 204px;
+                display: flex;
+                justify-content: space-evenly;
+                width: 400px;
+                left: 517px;
+            }
+            .button button{
+                padding: 10px 36px;
+                margin: 10px 12px;
+                font-size: 20px;
+                background-color: #303030;
+                color:white;
+                border: 2px solid #303030;
+                
+            }
+            
+            .heading{
+                position: relative;
+                top: 100px;
+                text-align: center;
+                
+            }
+           
+            .demo{
+                text-align: center;
+                height: 1px;
+                position: relative;
+                top: 100px;
+                font-size: 33px;
+                letter-spacing: 2px;
+                word-spacing: 7px;
+                color: #333;
+            }
+            .image-container {
+               display: flex;
+                justify-content: space-between;
+                position: relative;
+                top: 200px;
+                margin-bottom: 40px; /* space between two containers */
+            }
+
+            .image-box {
+                text-align: center;
+                font-family: Arial, sans-serif;
+            }
+
+            .image-name {
+                margin-bottom: 8px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #333;
+            }
+            
+           .image-container2 {
+               display: flex;
+                justify-content: space-between;
+                position: relative;
+                top: 200px;
+                margin-bottom: 40px; /* space between two containers */
+            }
+
+            .image-box2 {
+                text-align: center;
+                font-family: Arial, sans-serif;
+            }
+
+            .image-name2 {
+                margin-bottom: 8px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #333;
+            }
+             .image-box img {
+                 border-radius: 8px;
+                 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+             }
+              .image-box2 img {
+                 border-radius: 8px;
+                 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+             }
+             section {
+                max-width: 100%;
+                POSITION: relative;
+                top: 250px;
+                background-color: #434544;
+                padding-right: 47px;
+                height: 412px;
+                padding-top: 23px;
+            }
+
+            section p {
+                text-align: center;
+                letter-spacing: 1px;
+                margin-bottom: 52px;
+                font-size: 36px;
+                word-spacing: 7px;
+                color: #fbf8f8;
+            }
+
+            .features-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 47px;
+                list-style: none;
+            }
+
+            .features-list li {
+                background-color: #ffffff;
+                border: 2px solid #9d9898;
+                border-radius: 8px;
+                padding: 20px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #333;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s ease;
+            }
+
+            .features-list li:hover {
+                transform: scale(1.03);
+            }
+            .promo-section {
+               display: flex;
+               
+               overflow: hidden;
+               box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+              position: relative;
+              top: 310px;
+              height:443px;
+            }
+
+            .promo-image {
+               flex: 1;
+            }
+
+            .promo-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .promo-text {
+                flex: 1;
+                padding: 60px 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .promo-text h2 {
+                font-size: 36px;
+                color: #333;
+                margin-bottom: 20px;
+                letter-spacing: 1px;
+            }
+
+            .promo-text p {
+                font-size: 16px;
+                color: #555;
+                line-height: 1.6;
+                margin-bottom: 30px;
+                max-width: 400px;
+                font-weight:600;
+            }
+
+            .promo-text .btn {
+                padding: 12px 30px;
+                background-color: #434544;
+                color: white;
+                font-weight: bold;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                width: fit-content;
+                transition: background-color 0.3s ease;
+            }
+
+            .promo-text .btn:hover {
+                background-color: #e9c2db;
+                color:black;
+            }
+          
+
+            .gym-footer {
+                background-color: #111;
+                padding: 50px 40px;
+                color: #ccc;
+                position:relative;
+                top:500px;
+            }
+
+            .footer-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 40px;
+            }
+
+            .footer-section {
+                flex: 1 1 200px;
+            }
+
+            .footer-section h2 {
+                font-size: 24px;
+                font-weight: 700;
+                color: #fff;
+            }
+
+            .footer-section .highlight {
+                color: #e9c2db;
+            }
+
+            .footer-section .subtitle {
+                color: #aaa;
+                margin: 5px 0 15px;
+                font-size: 14px;
+                letter-spacing: 2px;
+            }
+
+            .footer-section p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .footer-section h3 {
+                color: #fff;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            .footer-section ul {
+                list-style: none;
+                padding: 0;
+                font-size: 14px;
+            }
+
+            .footer-section ul li {
+               margin-bottom: 10px;
+            }
+
+            .footer-section ul li a {
+                text-decoration: none;
+                color: #ccc;
+                transition: color 0.3s;
+            }
+
+            .footer-section ul li a:hover {
+               color: #f3f3ec;
+            }
+
+            .contact-info li {
+                display: flex;
+                align-items: start;
+                gap: 8px;
+            }
+
+            .contact-info i {
+                color: #e9c2db;
+                margin-top: 3px;
+            }
+                    
+@media (max-width: 1200px) {
+    body{
+	margin:0px;
+	padding:0px;
+	}
+	
+  .button {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 992px) {
+  .text {
+    font-size: 32px;
+    top: 140px;
+  }
+
+  .button {
+    flex-direction: column;
+    align-items: center;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+  }
+
+  .button button {
+    margin: 8px 0;
+    width: 200px;
+  }
+
+  .image-container, .image-container2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .image-box img, .image-box2 img {
+    width: 90vw;
+    height: auto;
+  }
+
+  section p {
+    font-size: 28px;
+  }
+
+  .features-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .promo-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .promo-text {
+    padding: 30px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .promo-text h2 {
+    font-size: 28px;
+  }
+
+  .promo-text p {
+    font-size: 14px;
+  }
+
+  .promo-text .btn {
+    width: 70%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nav p {
+    margin-bottom: 10px;
+	margin-right: 137px;
+        /* margin-bottom: -52px; */
+        margin-top: 0px;
+  }
+
+  .demo {
+    font-size: 24px;
+    top: 80px;
+  }
+
+  .text {
+    font-size: 28px;
+    top: 100px;
+  }
+
+  .button {
+    top: 120px;
+  }
+
+  section {
+    top: 180px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+  }
+
+  .promo-text .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 22px;
+  }
+
+  .button {
+    width: 90%;
+  }
+
+  .button button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .promo-text h2 {
+    font-size: 22px;
+  }
+
+  .promo-text p {
+    font-size: 13px;
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+
+  .demo {
+    font-size: 20px;
+  }
+
+  .footer-section h2, .footer-section h3 {
+    font-size: 18px;
+  }
+
+  .footer-section p, .footer-section ul li {
+    font-size: 13px;
+  }
+
+  .image-box img, .image-box2 img {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+
+  .text {
+    font-size: 28px;
+    top: 100px;
+  }
+
+  .button {
+    flex-direction: column;
+    align-items: center;
+    left: auto;
+    top: 120px;
+    width: 100%;
+  }
+
+  .button button {
+    width: 70%;
+    font-size: 18px;
+  }
+
+  .demo {
+    font-size: 26px;
+    top: 130px;
+  }
+
+  .image-container,
+  .image-container2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    top: 150px;
+  }
+
+  .image-box img,
+  .image-box2 img {
+    width: 90vw;
+    height: auto;
+  }
+
+  section {
+    padding: 20px;
+    height: auto;
+    top: 200px;
+  }
+
+  section p {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .promo-section {
+    flex-direction: column;
+    height: auto;
+    top: 220px;
+  }
+
+  .promo-image,
+  .promo-text {
+    width: 100%;
+  }
+
+  .promo-text {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .promo-text h2 {
+    font-size: 26px;
+  }
+
+  .promo-text p {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .promo-text .btn {
+    padding: 10px 24px;
+    font-size: 16px;
+  }
+
+  .gym-footer {
+    padding: 40px 20px;
+    top: 280px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 20px;
+  }
+
+  .footer-section p,
+  .footer-section ul li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .text {
+    font-size: 22px;
+  }
+
+  .demo {
+    font-size: 20px;
+  }
+
+  .button button {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  .promo-text h2 {
+    font-size: 22px;
+  }
+
+  .promo-text p {
+    font-size: 14px;
+  }
+
+  section p {
+    font-size: 22px;
+  }
+
+  .features-list li {
+    font-size: 14px;
+  }
+}
+
+          
+
+        </style>
+		
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav"> <p>envato market </p>
+                <button>Buy Now </button>
+            </div>
+            
+               <div class="text">POWERFIT-GYM AND FITNESS</div> 
+               <div class="button">
+               <button> View all </button> 
+               <button>Buy Now </button>
+               </div>
+            </div>
+                <div class="demo"> WELCOME TO THE GYM </div>
+                  <!-- First Image Container -->
+                 <div class="image-container">
+                    <div class="image-box">
+                        <div class="image-name">AEROBICS</div>
+                        <img src="aerobics.jpg" alt="Aerobics" height="300" width="480">
+                    </div>
+                    <div class="image-box">
+                        <div class="image-name">STRENGTH</div>
+                        <img src="strength.jpg" alt="STRENGTH"height="300" width="480">
+                    </div>
+                    <div class="image-box">
+                        <div class="image-name">KICK BOXING</div>
+                        <img src="kickboxing.jpg" alt="KICK BOXING"height="300" width="480">
+                    </div>
+                    </div>
+
+                     <!-- Second Image Container -->
+                    <div class="image-container2">
+                    <div class="image-box2">
+                        <div class="image-name2">ZUMBA</div>
+                        <img src="zumba.jpg" alt="ZUMBA" height="300" width="480">
+                    </div>
+                    <div class="image-box2">
+                        <div class="image-name2">POWER YOGA</div>
+                        <img src="poweryoga.jpg" alt="POWER YOGA"height="300" width="480">
+                    </div>
+                    <div class="image-box2">
+                        <div class="image-name2">FREE WEIGHTS</div>
+                        <img src="freeweights.jpg" alt="FREE WEIGHTS"height="300" width="480">
+                    </div>
+                    </div>
+                    <section>
+                        <p>Why Choose POWERFIT Gym?</p>
+                        <ul class="features-list">
+                            <li>✅ 24/7 Access for Members</li>
+                            <li>✅ Clean, Air-Conditioned Workout Spaces</li>
+                            <li>✅ Personal & Group Training Sessions</li>
+                            <li>✅ Affordable Monthly & Annual Plans</li>
+                            <li>✅ Free Health & Body Assessments</li>
+                            <li>✅ Fun Group Classes (Zumba, HIIT, Yoga, etc.)</li>
+                            <li>✅ Certified & Experienced Fitness Trainers</li>
+                            <li>✅ Modern Equipment & Spacious Workout Zones</li>
+                        </ul>
+                    </section>
+                    <div class="promo-section">
+                        <div class="promo-image">
+                            <img src="fitness-girl.jpg" alt="Fitness Girl">
+                        </div>
+                        <div class="promo-text">
+                            <h2>25% off discount Fitness classes this summer</h2>
+                            <p>Once we receive your consult request we match you up with a trainer. This is to ensure that your unique goals, needs, and personalities align.</p>
+                            <button class="btn">Join Member</button>
+                        </div>
+                    </div>
+
+                    <footer class="gym-footer">
+                        <div class="footer-container">
+    
+                        <!-- Column 1: Logo & Info -->
+                        <div class="footer-section about">
+                                <h2><span>POWERFIT <span class="highlight">GYM</span></span></h2>
+                                <p class="subtitle">Fitness center</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi dui, malesuada id scelerisque ac, vulputate a purus.</p>
+                            <ul class="contact-info">
+                                <li><i class="fas fa-location-dot"></i> Whelco Place, Enfield Industrial Estate, Enfield Street</li>
+                                <li><i class="fas fa-phone"></i> 123-456-7890</li>
+                                <li><i class="fas fa-envelope"></i> online@support.com</li>
+                                <li><i class="fas fa-clock"></i> Open 7am - 2pm<br>Monday - Sunday</li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div class="footer-section">
+                            <h3>ACCOUNT</h3>
+                            <ul>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="#">Checkout</a></li>
+                                <li><a href="#">My Account</a></li>
+                             </ul>
+                        </div>
+
+                        <!-- Column 3 -->
+                        <div class="footer-section">
+                            <h3>CUSTOMER SERVICE</h3>
+                            <ul>
+                                <li><a href="#">Delivery</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Size guide</a></li>
+                                <li><a href="#">Gift Certificates</a></li>
+                                <li><a href="#">Site Map</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Column 4 -->
+                        <div class="footer-section">
+                            <h3>ABOUT FITNESS</h3>
+                            <ul>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Gender pay report</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Secure Shopping</a></li>
+                                <li><a href="#">Term & conditions</a></li>
+                                <li><a href="#">Returns & Refunds</a></li>
+                            </ul>
+                        </div>
+
+                        </div>
+                    </footer>
+
+            
+    </body>
+    </html>
